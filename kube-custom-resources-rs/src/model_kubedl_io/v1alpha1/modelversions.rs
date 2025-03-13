@@ -13,6 +13,7 @@ use self::prelude::*;
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, Default, PartialEq)]
 #[kube(group = "model.kubedl.io", version = "v1alpha1", kind = "ModelVersion", plural = "modelversions")]
 #[kube(namespaced)]
+#[kube(status = "ModelVersionStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="Default")]
 #[kube(derive="PartialEq")]

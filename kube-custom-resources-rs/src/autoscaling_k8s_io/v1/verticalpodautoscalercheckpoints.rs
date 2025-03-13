@@ -14,6 +14,7 @@ use self::prelude::*;
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, Default, PartialEq)]
 #[kube(group = "autoscaling.k8s.io", version = "v1", kind = "VerticalPodAutoscalerCheckpoint", plural = "verticalpodautoscalercheckpoints")]
 #[kube(namespaced)]
+#[kube(status = "VerticalPodAutoscalerCheckpointStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="Default")]
 #[kube(derive="PartialEq")]

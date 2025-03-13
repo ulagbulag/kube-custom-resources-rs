@@ -15,6 +15,7 @@ use self::prelude::*;
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, Default, PartialEq)]
 #[kube(group = "couchbase.com", version = "v2", kind = "CouchbaseBackup", plural = "couchbasebackups")]
 #[kube(namespaced)]
+#[kube(status = "CouchbaseBackupStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="Default")]
 #[kube(derive="PartialEq")]

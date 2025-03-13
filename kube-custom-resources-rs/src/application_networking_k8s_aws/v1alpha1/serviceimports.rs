@@ -13,6 +13,7 @@ use self::prelude::*;
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, PartialEq)]
 #[kube(group = "application-networking.k8s.aws", version = "v1alpha1", kind = "ServiceImport", plural = "serviceimports")]
 #[kube(namespaced)]
+#[kube(status = "ServiceImportStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="PartialEq")]
 pub struct ServiceImportSpec {

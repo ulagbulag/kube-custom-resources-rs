@@ -13,6 +13,7 @@ use self::prelude::*;
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, Default, PartialEq)]
 #[kube(group = "velero.io", version = "v1", kind = "ServerStatusRequest", plural = "serverstatusrequests")]
 #[kube(namespaced)]
+#[kube(status = "ServerStatusRequestStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="Default")]
 #[kube(derive="PartialEq")]

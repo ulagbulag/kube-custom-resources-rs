@@ -13,6 +13,7 @@ use self::prelude::*;
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, PartialEq)]
 #[kube(group = "chaos-mesh.org", version = "v1alpha1", kind = "GCPChaos", plural = "gcpchaos")]
 #[kube(namespaced)]
+#[kube(status = "GCPChaosStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="PartialEq")]
 pub struct GCPChaosSpec {

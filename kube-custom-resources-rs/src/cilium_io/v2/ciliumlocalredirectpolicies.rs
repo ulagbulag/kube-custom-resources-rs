@@ -14,6 +14,7 @@ use self::prelude::*;
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, Default, PartialEq)]
 #[kube(group = "cilium.io", version = "v2", kind = "CiliumLocalRedirectPolicy", plural = "ciliumlocalredirectpolicies")]
 #[kube(namespaced)]
+#[kube(status = "CiliumLocalRedirectPolicyStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="Default")]
 #[kube(derive="PartialEq")]

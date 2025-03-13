@@ -15,6 +15,7 @@ use self::prelude::*;
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, Default, PartialEq)]
 #[kube(group = "app.lightbend.com", version = "v1alpha1", kind = "AkkaCluster", plural = "akkaclusters")]
 #[kube(namespaced)]
+#[kube(status = "AkkaClusterStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="Default")]
 #[kube(derive="PartialEq")]

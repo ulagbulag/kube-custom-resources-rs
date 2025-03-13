@@ -162,7 +162,7 @@ pub struct KameletDataTypesTypesSchemaProperties {
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub description: Option<String>,
     #[serde(default, skip_serializing_if = "Option::is_none", rename = "enum")]
-    pub r#enum: Option<Vec<BTreeMap<String, serde_json::Value>>>,
+    pub r#enum: Option<Vec<serde_json::Value>>,
     /// JSON represents any valid JSON value.
     /// These types are supported: bool, int64, float64, string, []interface{}, map[string]interface{} and nil.
     #[serde(default, skip_serializing_if = "Option::is_none")]
@@ -284,7 +284,7 @@ pub struct KameletDefinitionProperties {
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub description: Option<String>,
     #[serde(default, skip_serializing_if = "Option::is_none", rename = "enum")]
-    pub r#enum: Option<Vec<BTreeMap<String, serde_json::Value>>>,
+    pub r#enum: Option<Vec<serde_json::Value>>,
     /// JSON represents any valid JSON value.
     /// These types are supported: bool, int64, float64, string, []interface{}, map[string]interface{} and nil.
     #[serde(default, skip_serializing_if = "Option::is_none")]
@@ -468,7 +468,7 @@ pub struct KameletTypesSchemaProperties {
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub description: Option<String>,
     #[serde(default, skip_serializing_if = "Option::is_none", rename = "enum")]
-    pub r#enum: Option<Vec<BTreeMap<String, serde_json::Value>>>,
+    pub r#enum: Option<Vec<serde_json::Value>>,
     /// JSON represents any valid JSON value.
     /// These types are supported: bool, int64, float64, string, []interface{}, map[string]interface{} and nil.
     #[serde(default, skip_serializing_if = "Option::is_none")]
@@ -686,7 +686,7 @@ pub struct KameletVersionsDataTypesTypesSchemaProperties {
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub description: Option<String>,
     #[serde(default, skip_serializing_if = "Option::is_none", rename = "enum")]
-    pub r#enum: Option<Vec<BTreeMap<String, serde_json::Value>>>,
+    pub r#enum: Option<Vec<serde_json::Value>>,
     /// JSON represents any valid JSON value.
     /// These types are supported: bool, int64, float64, string, []interface{}, map[string]interface{} and nil.
     #[serde(default, skip_serializing_if = "Option::is_none")]
@@ -808,7 +808,7 @@ pub struct KameletVersionsDefinitionProperties {
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub description: Option<String>,
     #[serde(default, skip_serializing_if = "Option::is_none", rename = "enum")]
-    pub r#enum: Option<Vec<BTreeMap<String, serde_json::Value>>>,
+    pub r#enum: Option<Vec<serde_json::Value>>,
     /// JSON represents any valid JSON value.
     /// These types are supported: bool, int64, float64, string, []interface{}, map[string]interface{} and nil.
     #[serde(default, skip_serializing_if = "Option::is_none")]
@@ -992,7 +992,7 @@ pub struct KameletVersionsTypesSchemaProperties {
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub description: Option<String>,
     #[serde(default, skip_serializing_if = "Option::is_none", rename = "enum")]
-    pub r#enum: Option<Vec<BTreeMap<String, serde_json::Value>>>,
+    pub r#enum: Option<Vec<serde_json::Value>>,
     /// JSON represents any valid JSON value.
     /// These types are supported: bool, int64, float64, string, []interface{}, map[string]interface{} and nil.
     #[serde(default, skip_serializing_if = "Option::is_none")]

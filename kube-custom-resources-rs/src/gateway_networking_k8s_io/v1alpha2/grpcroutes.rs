@@ -14,6 +14,7 @@ use self::prelude::*;
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, Default, PartialEq)]
 #[kube(group = "gateway.networking.k8s.io", version = "v1alpha2", kind = "GRPCRoute", plural = "grpcroutes")]
 #[kube(namespaced)]
+#[kube(status = "GRPCRouteStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="Default")]
 #[kube(derive="PartialEq")]

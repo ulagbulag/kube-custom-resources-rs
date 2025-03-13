@@ -17,6 +17,7 @@ use self::prelude::*;
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, Default, PartialEq)]
 #[kube(group = "scheduling.volcano.sh", version = "v1beta1", kind = "PodGroup", plural = "podgroups")]
 #[kube(namespaced)]
+#[kube(status = "PodGroupStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="Default")]
 #[kube(derive="PartialEq")]

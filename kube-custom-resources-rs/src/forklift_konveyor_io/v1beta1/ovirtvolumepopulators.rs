@@ -13,6 +13,7 @@ use self::prelude::*;
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, Default, PartialEq)]
 #[kube(group = "forklift.konveyor.io", version = "v1beta1", kind = "OvirtVolumePopulator", plural = "ovirtvolumepopulators")]
 #[kube(namespaced)]
+#[kube(status = "OvirtVolumePopulatorStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="Default")]
 #[kube(derive="PartialEq")]

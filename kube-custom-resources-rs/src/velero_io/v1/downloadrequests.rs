@@ -13,6 +13,7 @@ use self::prelude::*;
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, PartialEq)]
 #[kube(group = "velero.io", version = "v1", kind = "DownloadRequest", plural = "downloadrequests")]
 #[kube(namespaced)]
+#[kube(status = "DownloadRequestStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="PartialEq")]
 pub struct DownloadRequestSpec {

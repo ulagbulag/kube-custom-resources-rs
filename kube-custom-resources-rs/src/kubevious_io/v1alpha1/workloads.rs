@@ -483,7 +483,7 @@ pub struct WorkloadTemplateSpec {
     #[serde(default, skip_serializing_if = "Option::is_none", rename = "topologySpreadConstraints")]
     pub topology_spread_constraints: Option<Vec<WorkloadTemplateSpecTopologySpreadConstraints>>,
     #[serde(default, skip_serializing_if = "Option::is_none")]
-    pub volumes: Option<Vec<BTreeMap<String, serde_json::Value>>>,
+    pub volumes: Option<Vec<serde_json::Value>>,
 }
 
 #[derive(Serialize, Deserialize, Clone, Debug, Default, PartialEq)]

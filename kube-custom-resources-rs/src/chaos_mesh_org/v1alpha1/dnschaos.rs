@@ -14,6 +14,7 @@ use self::prelude::*;
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, PartialEq)]
 #[kube(group = "chaos-mesh.org", version = "v1alpha1", kind = "DNSChaos", plural = "dnschaos")]
 #[kube(namespaced)]
+#[kube(status = "DNSChaosStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="PartialEq")]
 pub struct DNSChaosSpec {

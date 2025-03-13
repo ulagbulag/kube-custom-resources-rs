@@ -12,6 +12,7 @@ use self::prelude::*;
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, Default, PartialEq)]
 #[kube(group = "networking.gke.io", version = "v1", kind = "ManagedCertificate", plural = "managedcertificates")]
 #[kube(namespaced)]
+#[kube(status = "ManagedCertificateStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="Default")]
 #[kube(derive="PartialEq")]

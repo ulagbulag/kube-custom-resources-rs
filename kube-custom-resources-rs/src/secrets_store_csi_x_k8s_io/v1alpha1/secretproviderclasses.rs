@@ -14,6 +14,7 @@ use self::prelude::*;
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, Default, PartialEq)]
 #[kube(group = "secrets-store.csi.x-k8s.io", version = "v1alpha1", kind = "SecretProviderClass", plural = "secretproviderclasses")]
 #[kube(namespaced)]
+#[kube(status = "SecretProviderClassStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="Default")]
 #[kube(derive="PartialEq")]

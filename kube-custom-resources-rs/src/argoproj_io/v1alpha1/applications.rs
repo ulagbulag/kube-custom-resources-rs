@@ -686,6 +686,7 @@ pub struct ApplicationOperationSyncSyncStrategyHook {
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, Default, PartialEq)]
 #[kube(group = "argoproj.io", version = "v1alpha1", kind = "Application", plural = "applications")]
 #[kube(namespaced)]
+#[kube(status = "ApplicationStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="Default")]
 #[kube(derive="PartialEq")]

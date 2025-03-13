@@ -14,6 +14,7 @@ use self::prelude::*;
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, Default, PartialEq)]
 #[kube(group = "devices.kubeedge.io", version = "v1beta1", kind = "Device", plural = "devices")]
 #[kube(namespaced)]
+#[kube(status = "DeviceStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="Default")]
 #[kube(derive="PartialEq")]

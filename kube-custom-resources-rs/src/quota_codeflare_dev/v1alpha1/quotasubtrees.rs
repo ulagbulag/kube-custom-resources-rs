@@ -15,6 +15,7 @@ use self::prelude::*;
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, Default, PartialEq)]
 #[kube(group = "quota.codeflare.dev", version = "v1alpha1", kind = "QuotaSubtree", plural = "quotasubtrees")]
 #[kube(namespaced)]
+#[kube(status = "QuotaSubtreeStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="Default")]
 #[kube(derive="PartialEq")]

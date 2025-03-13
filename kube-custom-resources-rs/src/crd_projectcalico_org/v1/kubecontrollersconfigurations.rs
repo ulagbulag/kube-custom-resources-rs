@@ -13,6 +13,7 @@ use self::prelude::*;
 /// KubeControllersConfigurationSpec contains the values of the Kubernetes controllers configuration.
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, Default, PartialEq)]
 #[kube(group = "crd.projectcalico.org", version = "v1", kind = "KubeControllersConfiguration", plural = "kubecontrollersconfigurations")]
+#[kube(status = "KubeControllersConfigurationStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="Default")]
 #[kube(derive="PartialEq")]

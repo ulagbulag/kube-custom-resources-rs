@@ -14,6 +14,7 @@ use self::prelude::*;
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, PartialEq)]
 #[kube(group = "chaos-mesh.org", version = "v1alpha1", kind = "StressChaos", plural = "stresschaos")]
 #[kube(namespaced)]
+#[kube(status = "StressChaosStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="PartialEq")]
 pub struct StressChaosSpec {

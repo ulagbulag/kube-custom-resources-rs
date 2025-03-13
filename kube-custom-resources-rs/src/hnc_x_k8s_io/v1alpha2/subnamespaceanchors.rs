@@ -12,6 +12,7 @@ use self::prelude::*;
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, Default, PartialEq)]
 #[kube(group = "hnc.x-k8s.io", version = "v1alpha2", kind = "SubnamespaceAnchor", plural = "subnamespaceanchors")]
 #[kube(namespaced)]
+#[kube(status = "SubnamespaceAnchorStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="Default")]
 #[kube(derive="PartialEq")]

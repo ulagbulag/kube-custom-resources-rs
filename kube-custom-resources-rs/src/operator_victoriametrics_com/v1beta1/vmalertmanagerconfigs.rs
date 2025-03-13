@@ -3281,7 +3281,7 @@ pub struct VMAlertmanagerConfigRoute {
     /// Child routes.
     /// https://prometheus.io/docs/alerting/latest/configuration/#route
     #[serde(default, skip_serializing_if = "Option::is_none")]
-    pub routes: Option<Vec<BTreeMap<String, serde_json::Value>>>,
+    pub routes: Option<Vec<serde_json::Value>>,
 }
 
 /// TimeIntervals for alerts

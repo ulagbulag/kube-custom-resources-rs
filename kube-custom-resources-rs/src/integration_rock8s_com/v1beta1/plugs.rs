@@ -869,7 +869,7 @@ pub struct PlugResources {
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub template: Option<serde_json::Value>,
     #[serde(default, skip_serializing_if = "Option::is_none")]
-    pub templates: Option<Vec<BTreeMap<String, serde_json::Value>>>,
+    pub templates: Option<Vec<serde_json::Value>>,
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub when: Option<Vec<String>>,
 }
@@ -885,7 +885,7 @@ pub struct PlugResultResources {
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub template: Option<serde_json::Value>,
     #[serde(default, skip_serializing_if = "Option::is_none")]
-    pub templates: Option<Vec<BTreeMap<String, serde_json::Value>>>,
+    pub templates: Option<Vec<serde_json::Value>>,
 }
 
 /// Var represents a variable whose value will be sourced from a field in a Kubernetes object.

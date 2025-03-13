@@ -13,6 +13,7 @@ use self::prelude::*;
 
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, Default, PartialEq)]
 #[kube(group = "scheduling.koordinator.sh", version = "v1alpha1", kind = "Device", plural = "devices")]
+#[kube(status = "DeviceStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="Default")]
 #[kube(derive="PartialEq")]

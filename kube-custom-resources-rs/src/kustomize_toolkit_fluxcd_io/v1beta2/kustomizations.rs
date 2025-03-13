@@ -68,7 +68,7 @@ pub struct KustomizationSpec {
     /// Strategic merge patches, defined as inline YAML objects.
     /// Deprecated: Use Patches instead.
     #[serde(default, skip_serializing_if = "Option::is_none", rename = "patchesStrategicMerge")]
-    pub patches_strategic_merge: Option<Vec<BTreeMap<String, serde_json::Value>>>,
+    pub patches_strategic_merge: Option<Vec<serde_json::Value>>,
     /// Path to the directory containing the kustomization.yaml file, or the
     /// set of plain YAMLs a kustomization.yaml should be generated for.
     /// Defaults to 'None', which translates to the root path of the SourceRef.

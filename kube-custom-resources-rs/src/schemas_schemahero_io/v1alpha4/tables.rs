@@ -14,6 +14,7 @@ use self::prelude::*;
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, Default, PartialEq)]
 #[kube(group = "schemas.schemahero.io", version = "v1alpha4", kind = "Table", plural = "tables")]
 #[kube(namespaced)]
+#[kube(status = "TableStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="Default")]
 #[kube(derive="PartialEq")]

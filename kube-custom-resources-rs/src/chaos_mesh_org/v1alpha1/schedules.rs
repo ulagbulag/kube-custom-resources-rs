@@ -16,6 +16,7 @@ use self::prelude::*;
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, Default, PartialEq)]
 #[kube(group = "chaos-mesh.org", version = "v1alpha1", kind = "Schedule", plural = "schedules")]
 #[kube(namespaced)]
+#[kube(status = "ScheduleStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="Default")]
 #[kube(derive="PartialEq")]

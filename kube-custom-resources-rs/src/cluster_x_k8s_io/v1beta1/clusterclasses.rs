@@ -611,7 +611,7 @@ pub struct ClusterClassVariablesSchemaOpenApiv3Schema {
     /// enum is the list of valid values of the variable.
     /// NOTE: Can be set for all types.
     #[serde(default, skip_serializing_if = "Option::is_none", rename = "enum")]
-    pub r#enum: Option<Vec<BTreeMap<String, serde_json::Value>>>,
+    pub r#enum: Option<Vec<serde_json::Value>>,
     /// example is an example for this variable.
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub example: Option<serde_json::Value>,
@@ -1562,7 +1562,7 @@ pub struct ClusterClassStatusVariablesDefinitionsSchemaOpenApiv3Schema {
     /// enum is the list of valid values of the variable.
     /// NOTE: Can be set for all types.
     #[serde(default, skip_serializing_if = "Option::is_none", rename = "enum")]
-    pub r#enum: Option<Vec<BTreeMap<String, serde_json::Value>>>,
+    pub r#enum: Option<Vec<serde_json::Value>>,
     /// example is an example for this variable.
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub example: Option<serde_json::Value>,

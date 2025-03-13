@@ -13,6 +13,7 @@ use self::prelude::*;
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, Default, PartialEq)]
 #[kube(group = "rules.kubeedge.io", version = "v1", kind = "Rule", plural = "rules")]
 #[kube(namespaced)]
+#[kube(status = "RuleStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="Default")]
 #[kube(derive="PartialEq")]

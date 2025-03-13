@@ -12,6 +12,7 @@ use self::prelude::*;
 /// CalicoNodeStatusSpec contains the specification for a CalicoNodeStatus resource.
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, Default, PartialEq)]
 #[kube(group = "crd.projectcalico.org", version = "v1", kind = "CalicoNodeStatus", plural = "caliconodestatuses")]
+#[kube(status = "CalicoNodeStatusStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="Default")]
 #[kube(derive="PartialEq")]

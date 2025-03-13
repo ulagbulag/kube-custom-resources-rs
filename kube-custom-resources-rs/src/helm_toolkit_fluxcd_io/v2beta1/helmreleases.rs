@@ -544,7 +544,7 @@ pub struct HelmReleasePostRenderersKustomize {
     pub patches_json6902: Option<Vec<HelmReleasePostRenderersKustomizePatchesJson6902>>,
     /// Strategic merge patches, defined as inline YAML objects.
     #[serde(default, skip_serializing_if = "Option::is_none", rename = "patchesStrategicMerge")]
-    pub patches_strategic_merge: Option<Vec<BTreeMap<String, serde_json::Value>>>,
+    pub patches_strategic_merge: Option<Vec<serde_json::Value>>,
 }
 
 /// Image contains an image name, a new name, a new tag or digest, which will replace the original name and tag.

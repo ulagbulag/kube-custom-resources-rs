@@ -15,6 +15,7 @@ use self::prelude::*;
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, Default, PartialEq)]
 #[kube(group = "velero.io", version = "v1", kind = "PodVolumeBackup", plural = "podvolumebackups")]
 #[kube(namespaced)]
+#[kube(status = "PodVolumeBackupStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="Default")]
 #[kube(derive="PartialEq")]

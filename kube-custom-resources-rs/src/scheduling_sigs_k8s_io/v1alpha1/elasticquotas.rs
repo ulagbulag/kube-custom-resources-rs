@@ -15,6 +15,7 @@ use self::prelude::*;
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, Default, PartialEq)]
 #[kube(group = "scheduling.sigs.k8s.io", version = "v1alpha1", kind = "ElasticQuota", plural = "elasticquotas")]
 #[kube(namespaced)]
+#[kube(status = "ElasticQuotaStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="Default")]
 #[kube(derive="PartialEq")]

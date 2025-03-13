@@ -14,6 +14,7 @@ use self::prelude::*;
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, Default, PartialEq)]
 #[kube(group = "boskos.k8s.io", version = "v1", kind = "ResourceObject", plural = "resources")]
 #[kube(namespaced)]
+#[kube(status = "ResourceObjectStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="Default")]
 #[kube(derive="PartialEq")]

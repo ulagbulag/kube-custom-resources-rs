@@ -13,6 +13,7 @@ use self::prelude::*;
 /// HNCConfigurationSpec defines the desired state of HNC configuration.
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, Default, PartialEq)]
 #[kube(group = "hnc.x-k8s.io", version = "v1alpha2", kind = "HNCConfiguration", plural = "hncconfigurations")]
+#[kube(status = "HNCConfigurationStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="Default")]
 #[kube(derive="PartialEq")]

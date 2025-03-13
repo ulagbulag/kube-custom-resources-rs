@@ -13,6 +13,7 @@ use self::prelude::*;
 #[derive(CustomResource, Serialize, Deserialize, Clone, Debug, Default, PartialEq)]
 #[kube(group = "schemas.schemahero.io", version = "v1alpha4", kind = "Migration", plural = "migrations")]
 #[kube(namespaced)]
+#[kube(status = "MigrationStatus")]
 #[kube(schema = "disabled")]
 #[kube(derive="Default")]
 #[kube(derive="PartialEq")]
